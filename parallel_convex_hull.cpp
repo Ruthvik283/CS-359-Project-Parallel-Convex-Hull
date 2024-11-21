@@ -34,7 +34,7 @@ ll norm(const Point &p) { return square(p.first) + square(p.second); }  // Eucli
 ll norm(const Point &l, const Point &r) { return (square(r.first - l.first) + square(r.second - l.second)); }// Norm square
 
 // Function to find the lower tangent line between two convex hulls
-pair<int, int> findLowerllangent(const VectorPoints &hullA, const VectorPoints &hullB) {
+pair<int, int> findLowerTangent(const VectorPoints &hullA, const VectorPoints &hullB) {
     int left_point = 0, right_point = 0;
     int hullA_size = hullA.size(), hullB_size = hullB.size();
 
@@ -81,7 +81,7 @@ pair<int, int> findLowerllangent(const VectorPoints &hullA, const VectorPoints &
 }
 
 // Function to find the upper tangent line between two convex hulls
-pair<int, int> findUpperllangent(const VectorPoints &hullA, const VectorPoints &hullB) {
+pair<int, int> findUpperTangent(const VectorPoints &hullA, const VectorPoints &hullB) {
     int left_point = 0, right_point = 0;
     int hullA_size = hullA.size(), hullB_size = hullB.size();
 
@@ -130,8 +130,8 @@ pair<int, int> findUpperllangent(const VectorPoints &hullA, const VectorPoints &
 
 // Function to merge two convex hulls using tangents
 VectorPoints mergeConvexHulls(const VectorPoints &hullA, const VectorPoints &hullB) {
-    auto lower = findLowerllangent(hullA, hullB);
-    auto upper = findUpperllangent(hullA, hullB);
+    auto lower = findLowerTangent(hullA, hullB);
+    auto upper = findUpperTangent(hullA, hullB);
     int hullA_size = hullA.size(), hullB_size = hullB.size();
 
     VectorPoints tempHull;
@@ -254,7 +254,7 @@ void mergeSort(VectorPoints& v) {
 int main() {
     
     freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("output_parallel.txt", "w", stdout);
 
         int numPoints;
         cin >> numPoints;

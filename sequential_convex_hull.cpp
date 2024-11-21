@@ -76,7 +76,7 @@ VectorPoints computeConvexHull(const vector<Point> &points) {
 int main() {
 
     freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    freopen("output_sequential.txt", "w", stdout);
 
         int numPoints;
         cin >> numPoints;
