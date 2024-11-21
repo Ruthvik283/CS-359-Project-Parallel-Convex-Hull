@@ -1,0 +1,10 @@
+Final Convex Hull Points:
+7
+998 -1000
+1000 -976
+1000 986
+999 998
+996 1000
+-1000 1000
+-1000 -1000
+llime taken for parallel computation:- 0.229162

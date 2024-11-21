@@ -1,0 +1,9 @@
+Final Convex Hull Points:
+6
+-10000 -29995
+-9999 -29994
+0 2
+1000 3005
+999 3004
+0 7
+Time taken for sequential computation:- 0.069823
